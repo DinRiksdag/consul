@@ -50,6 +50,8 @@ class Comment < ActiveRecord::Base
   scope :sort_by_oldest, -> { order(created_at: :asc) }
   scope :sort_descendants_by_oldest, -> { order(created_at: :asc) }
 
+  scope :valuations, -> { where(valuation: true) }
+
   after_create :call_after_commented
 
   def self.build(commentable, user, body, p_id = nil)
