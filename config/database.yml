@@ -1,5 +1,5 @@
 default: &default
-  url: *development
+  <<: *development
 
 development: &development
   adapter: postgresql
@@ -20,7 +20,7 @@ preproduction:
   <<: *development
 
 production:
-  <<: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
 test:
   <<: *default
