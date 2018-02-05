@@ -1,7 +1,4 @@
 default: &default
-  <<: *development
-
-development: &development
   adapter: postgresql
   encoding: unicode
   host: localhost
@@ -9,6 +6,9 @@ development: &development
   port: 5432
   username: postgres
   password: <%= ENV['POSTGRES_PASSWORD'] %>
+
+development: &development
+  <<: *default
   database: consul_development
 
 # The staging, preproduction and production dbs are only needed
