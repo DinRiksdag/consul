@@ -4,6 +4,6 @@ build:
   packages:
     - imagemagick
 run:
-  web: bundle exec rails server -e ${RACK_ENV:-production}
+  web: bundle exec puma -C config/puma.rb
   worker:  bundle exec rake db:migrate
   worker:  bundle exec rake db:dev_seed
