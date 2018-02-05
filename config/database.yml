@@ -6,7 +6,7 @@ default: &default
 #  port: 5432
 #  username: postgres
 #  password: <%= ENV['POSTGRES_PASSWORD'] %>
-  url: <%= ENV['HEROKU_POSTGRESQL_YELLOW_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
 development: &development
   <<: *default
@@ -21,7 +21,7 @@ preproduction:
   <<: *development
 
 production:
-  url: <%= ENV['HEROKU_POSTGRESQL_YELLOW_URL'] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
 test:
   <<: *default
