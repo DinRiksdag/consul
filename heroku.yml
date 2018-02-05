@@ -1,0 +1,7 @@
+build:
+  languages:
+    - ruby
+  packages:
+    - imagemagick
+run:
+  web: bundle exec rails server -b 0.0.0.0 -e ${RACK_ENV:-production}
