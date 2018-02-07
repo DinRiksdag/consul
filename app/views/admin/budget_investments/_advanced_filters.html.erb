@@ -7,27 +7,28 @@
 <div id="advanced_filters" class="row expanded advanced-filters-content hide" data-toggler=".hide">
   <%= form_tag(admin_budget_budget_investments_path(budget: @budget,
                                                     filter: params[:filter],
-                                                    second_filter: params[:second_filter],
+                                                    sort_by: params[:sort_by],
                                                     max_per_heading: params[:max_per_heading],
+                                                    advanced_filters: params[:advanced_filters],
                                                     page: 1), method: :get, remote: true, enforce_utf8: false) do %>
     <div class="small-12 medium-8 large-10 column">
       <span class="filter">
-        <%= check_box_tag :second_filter, "feasible" %>
+        <%= check_box_tag "advanced_filters[]", "feasible" %>
         <%= t("#{i18n_namespace}.filters.feasible") %>
       </span>
 
       <span class="filter">
-        <%= check_box_tag :second_filter, "selected" %>
+        <%= check_box_tag "advanced_filters[]", "selected" %>
         <%= t("#{i18n_namespace}.filters.selected") %>
       </span>
 
       <span class="filter">
-        <%= check_box_tag :second_filter, "undecided" %>
+        <%= check_box_tag "advanced_filters[]", "undecided" %>
         <%= t("#{i18n_namespace}.filters.undecided") %>
       </span>
 
       <span class="filter">
-        <%= check_box_tag :second_filter, "unfeasible" %>
+        <%= check_box_tag "advanced_filters[]", "unfeasible" %>
         <%= t("#{i18n_namespace}.filters.unfeasible") %>
       </span>
 
@@ -38,7 +39,7 @@
     </div>
 
     <div class="small-12 medium-4 large-2 column">
-      <%= submit_tag t("#{i18n_namespace}.filters.button"), class: "button expanded" %>
+      <%= submit_tag t("admin.budget_investments.index.buttons.filter"), class: "button expanded" %>
     </div>
   <% end %>
 </div>
