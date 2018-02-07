@@ -3,8 +3,8 @@ Rails.application.configure do
 
   # Fetching the secret key from an ENV variable instead of looking
   # for a missing secret.yml file
-  config.secret_key_base = ENV["SECRET_KEY_BASE"]
-  
+  config.secret_key_base = ENV['SECRET_KEY_BASE']
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
