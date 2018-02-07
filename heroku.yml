@@ -5,5 +5,5 @@ build:
     - imagemagick
 run:
   web: bundle exec puma -C config/puma.rb
-  worker:  bundle exec rake db:migrate
-  worker:  bundle exec rake db:dev_seed
+  migrate:  bundle exec rake db:migrate
+  dev_seed:  bundle exec rake db:dev_seed
