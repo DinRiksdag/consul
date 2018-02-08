@@ -79,6 +79,10 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # Fetching the secret key from an ENV variable instead of looking
+  # for a missing secret.yml file
+  config.secret_key_base = ENV['SECRET_KEY_BASE']
+
   # Mail settings
   config.action_mailer.delivery_method = :smtp
     config.action_mailer.perform_deliveries = true
