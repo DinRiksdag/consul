@@ -4,7 +4,7 @@ Rails.application.configure do
   # Fetching the secret key from an ENV variable instead of looking
   # for a missing secret.yml file
   config.secret_key_base = ENV['SECRET_KEY_BASE']
-  
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -89,7 +89,7 @@ Rails.application.configure do
     config.action_mailer.smtp_settings = {
         :address              => ENV['MAILGUN_SMTP_SERVER'],
         :port                 => ENV['MAILGUN_SMTP_PORT'],
-        :domain               => 'dinriksdag.se',
+        :domain               => 'dinriksdag.herokuapp.com',
         :user_name            => ENV['MAILGUN_SMTP_LOGIN'],
         :password             => ENV['MAILGUN_SMTP_PASSWORD'],
         :authentication => :plain,
