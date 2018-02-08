@@ -6,6 +6,7 @@
 
 gem 'puma'
 gem 'rack-timeout'
-gem 'rails_12factor'
+gem 'rails_12factor', :group => :production
+gem 'heroku-deflater', :group => :production
 
 ruby '2.3.2'
