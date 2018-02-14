@@ -7,9 +7,19 @@ en:
     none: All the country
   layouts:
     footer:
+      description: Din Riksdag is not affiliated with Riksdagen.
+      contact_us: To learn more about the project, please visit the %{development_blog} or send us an email at %{email_info}.
+      development_blog: development blog
+      development_blog_url: https://blog.dinriksdag.se
+      email_info: info@dinriksdag.se
+      email_info_url: mailto:info@dinriksdag.se
+      assistance: You can also read the %{faq}.
+      faq: FAQ
+      faq_url: /help/faq
       open_data_text: Every information about the Riksdag is yours to access.
       open_source_url: https://github.com/DinRiksdag/consul
       participation_text: Decide how to shape the country you want to live in.
+      transparency_text: Find out anything about your parliament.
       transparency_url: http://www.riksdagen.se
     header:
       external_link_blog: Blog
@@ -19,6 +29,7 @@ en:
       external_link_transparency_url: http://riksdagen.se
       open_city_slogan_html: Granted, the <b>Swedish democracy</b> works pretty well! But what if we could make it <b>even better</b>? What if you could <b>give feedback to your representatives</b> on every issue that matters to you? What if you could <b>submit proposals</b> and try to turn them into law?
       open_city_title: Help your representatives to shape a better Sweden!
+      open_gov: Din Riksdag
   map:
     title: "Region"
     proposal_for_district: "Start a proposal for your region"

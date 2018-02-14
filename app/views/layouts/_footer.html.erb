@@ -6,12 +6,14 @@
       </h1>
 
       <p class="info">
-        <%= t("layouts.footer.description",
-          open_source: link_to(t("layouts.footer.open_source"), t("layouts.footer.open_source_url"), target: "blank", rel: "nofollow"),
-          consul:  link_to(t("layouts.footer.consul"), t("layouts.footer.consul_url"), target: "blank", rel: "nofollow")).html_safe
+        <%= t("layouts.footer.description") %>
+        <%= t("layouts.footer.contact_us",
+          development_blog: link_to(t("layouts.footer.development_blog"), t("layouts.footer.development_blog_url"), target: "blank", rel: "nofollow"),
+          email_info: link_to(t("layouts.footer.email_info"), t("layouts.footer.email_info_url"), target: "blank", rel: "nofollow")).html_safe
         %>
-        <%= t("layouts.footer.contact_us") %>
-        <%= link_to t("layouts.footer.faq"), faq_path %>
+        <%= t("layouts.footer.assistance",
+          faq: link_to(t("layouts.footer.faq"), t("layouts.footer.faq_url"))).html_safe
+        %>
       </p>
     </div>
 
