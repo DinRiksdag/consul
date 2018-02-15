@@ -7,7 +7,7 @@ feature "Home" do
     scenario 'Welcome message' do
       visit root_path
 
-      expect(page).to have_content "Love the city, and it will become a city you love"
+      expect(page).to have_content "Help your representatives to shape a better Sweden!"
     end
 
     scenario 'Not display recommended section' do

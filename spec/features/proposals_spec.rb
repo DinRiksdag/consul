@@ -440,7 +440,7 @@ feature 'Proposals' do
       click_link 'Not now, go to my proposal'
 
       within "#geozone" do
-        expect(page).to have_content 'All city'
+        expect(page).to have_content 'All the country'
       end
     end
 
