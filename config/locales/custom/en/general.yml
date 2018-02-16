@@ -2,7 +2,7 @@ en:
   debates:
     index:
       section_footer:
-        help_text_3: "Keep in mind that a debate does not start any specific action. If you want to make a %{proposal} for the country or raise a investment project of %{budget} when the phase is open, go to the corresponding section."
+        help_text_3: "Keep in mind that a debate does not start any specific action. If you want to make a %{proposal}, go to the corresponding section."
   geozones:
     none: All the country
   layouts:
@@ -38,14 +38,17 @@ en:
       section_footer:
         description: Make a citizen proposal. If it gets enough supports it will go to voting phase, so you can get all the citizens to decide how they want their country to be.
         help_text_1: "The citizen proposals are an opportunity for citizens and collectives to decide directly how they want to shape their country. Any person can make a proposal about a topic or concern of their interest, for the parliament to make it, after it gets enough supports to be put to a citizens vote."
-        help_text_3: "A citizen vote is celebrated when the proposals get the necessary supports. Once celebrated, if there are more people in favor than against, a representative will take up the proposal and present a project to the parliament."
+        help_text_2: "To create a proposal, you must sign up on %{org}. The proposals that get the support of 100 users of the platform go to the voting phase. To support proposals it is necessary to have a verified account."
+        help_text_3: "A citizen vote is celebrated when the proposals get the necessary supports. Once celebrated, if there are more people in favor than against, a representative can take up the proposal and present a project or a motion to the parliament."
+    proposal:
+      reason_for_supports_necessary: 100 people
   polls:
     index:
       no_geozone_restricted: "All the country"
       geozone_restricted: "Regions"
       section_footer:
         description: Sign up to vote on citizen proposals and questions that members of parliaments ask to citizens.
-        help_text_1: "Voting takes place when a citizen proposal supports reaches 1% of the census with voting rights. Voting can also include questions that representatives ask to get feedback from their citizens."
+        help_text_1: "Voting takes place when a citizen proposal supports reaches 100 users of the platform. Voting can also include questions that representatives ask to get feedback from their citizens."
         help_text_2: "To participate in the next vote you have to sign up on %{org} and verify your account. All registered voters in the country over 16 years old can vote."
   shared:
     tags_cloud:
@@ -53,8 +56,10 @@ en:
       districts_list: "Regions list"
   welcome:
     debates:
-      description: For meeting, discussing and sharing the things that matter to us in our country.
+      description: Talk about a topic discussed in the Riksdag or any other political issue that matters to you.
+    proposal:
+      description: You have an idea? Submit it to the community and to your representatives.
+    decide:
+      description: People can support your proposal and vote on it.
     do:
       description: If the proposal is accepted by the majority, it can be taken to the Riksdag to become a real law project.
-    proposal:
-      description: Open space for citizen proposals about the kind of society we want to live in.

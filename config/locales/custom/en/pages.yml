@@ -1,0 +1,40 @@
+en:
+  pages:
+    help:
+      subtitle: "In %{org} you can make proposals, vote in citizen consultations, contribute to the creation of new texts of law and open debates to exchange opinions with others."
+      debates:
+        description: "In the %{link} section you can present and share your opinion with other people on the discussions and decisions of your representatives in the Riksdag, or simply on issues of concern to you. It is also a place to generate ideas that through the other sections of %{org} lead to concrete decisions by the Riksdag."
+        link: "Debates"
+      proposals:
+        description: "In the %{link} section you can make proposals of decisions you would like your representatives to make. The proposals require support, and if they reach sufficient support, they are put to a public vote. Right now, the members of parliament have no obligation to look at a proposal that has been publicly approved. It is up to the MPs themselves to decide to take it up to the parliament. But a constraining mechanism has already been written in the constitution of several countries and it is hoped that Sweden will do the same in the future."
+        link: "Proposals"
+        feature_html: "To create a proposal you must register in %{org}. The proposals that get the support on the website of 100 people with the right to vote (%{supports} supports of people over 16 years old registered) go to vote. To support proposals it is necessary to verify your account."
+      polls:
+        title: "Polls"
+        description: "The %{link} section is activated each time a proposal reaches 100 supports and goes to the vote or for every vote happening in the Riskdag. Members of parliament on the platform can also propose their own votes to get direct feedback from citizens."
+        link: "Polls"
+        feature_3: "The mirroring of Riksdag's votes in this section has not been implemented yet."
+      faq:
+        title: "Technical problems?"
+        description: "Read the FAQs and solve your questions."
+        button: "View frequently asked questions"
+        page:
+          title: "Frequently Asked Questions"
+          description: "Use this page to resolve the common FAQs to the users of site."
+          faq_1_title: "What is this website?"
+          faq_1_description: "Din Riksdag is a platform to allow citizens and their representatives to discuss the activity of the Riksdag and make decisions collectively."
+          faq_2_title: "Why is it still so messy? Why is it not available in Swedish?"
+          faq_2_description: "Din Riksdag was created at the beginning of February and is currently developed and maintained by only one (non-Swedish) volunteer. It is based on the platform Consul, developed by the city of Madrid, which explains why you can access it in Castellano and 5 other regional Spanish dialects, but not in Swedish. You can really easily help to translate it by going to Consul Crowdin's project."
+          faq_3_title: "The registration system doesn't work"
+          faq_3_description: "It should. If you don't receive your confirmation e-mail, send me a message to info@dinriksdag.se. However, the verification system is not functional yet."
+          faq_4_title: "Why does the header say 'beta'?"
+          faq_4_description: "The platform is still under construction. The current content is mainly here for demo and test purpose. You can register and use it but be aware that you are not guaranteed that what you write will be kept when the platform is officially open. Also, there is no moderation guaranteed yet."
+          faq_5_title: "What can I do to help?"
+          faq_5_description: "Would you be interested in joining the project? Or just helping? There are a lot of interesting things to do to adapt the platform to the Swedish Riksdag. Examples include translating it, writing more documentation, allowing people to log in with their personnummer and integrating automatically content from the Riksdag through their open data APIs. You can also contact your representative to tell them about the project and ask them if they would like to try the platform."
+      how_to_use:
+        text: |-
+          Use it in your local government or help us to improve it, it is free software.
+
+          Din Riksdag uses the [CONSUL app](https://github.com/consul/consul 'consul github') that is free software, with [licence AGPLv3](http://www.gnu.org/licenses/agpl-3.0.html 'AGPLv3 gnu' ), which means in simple words that anyone can use the code freely, copy it, see it in detail, modify it and redistribute it to the word with the modifications he wants (allowing others to do the same). Because we think culture is better and richer when it is released.
+
+          If you are a programmer, you can see the code and help us to improve it at [CONSUL app](https://github.com/consul/consul 'consul github').

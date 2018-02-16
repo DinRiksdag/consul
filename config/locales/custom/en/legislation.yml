@@ -1,0 +1,9 @@
+en:
+  legislation:
+    processes:
+      index:
+        section_footer:
+          description: This feature is not yet ready for use but it is the most ambitious of Din Riksdag.
+          help_text_1: "In the future, elected members of the Riksdag will be able to post draft of law projects in this category to get interactive feedback from citizens and collaboratively improve them."
+          help_text_2: "Only people registered in %{org} will be able to participate. Your comments and suggestions will be presented to the author of the draft that will have the choice to include them or not."
+          help_text_3: "Because a constructive process of co-construction of the law requires all the actors to be informed on the issue, this section will also allow the authors to provide citizens with documentation on the topic."
