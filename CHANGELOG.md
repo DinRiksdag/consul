@@ -7,11 +7,24 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased](https://github.com/consul/consul/compare/v0.13...consul:master)
 
 ### Added
+- Missing polls button on help page https://github.com/consul/consul/pull/2452
+- New legislation processes section on help page https://github.com/consul/consul/pull/2452
+- Add alert message when a user deletes an investment project from "My activity" https://github.com/consul/consul/pull/2385
+- Admin newsletter emails https://github.com/consul/consul/pull/2462
+- Admin emails list download https://github.com/consul/consul/pull/2466
+
 ### Changed
+- Show investment links only on phase balloting or later https://github.com/consul/consul/pull/2386
+- Improved Document lists https://github.com/consul/consul/pull/2490
+
 ### Deprecated
 ### Removed
 ### Fixed
 - Improve spec boot time and clean up logs https://github.com/consul/consul/pull/2444
+- Flaky spec: random investments order scenario https://github.com/consul/consul/pull/2454
+- Flaky spec: users without email should not receive emails https://github.com/consul/consul/pull/2453
+- Flaky spec: missing comment on legislation annotation https://github.com/consul/consul/pull/2455
+- Flaky spec: Residence Assigned officers error https://github.com/consul/consul/pull/2458
 
 ### Security
 

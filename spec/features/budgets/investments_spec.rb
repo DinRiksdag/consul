@@ -560,16 +560,19 @@ feature 'Budget Investments' do
       expect(current_url).to include('page=1')
     end
 
-    scenario 'Each user as a different and consistent random budget investment order', :js do
+    scenario 'Each user has a different and consistent random budget investment order when random_seed is disctint', :js do
       (Kaminari.config.default_per_page * 1.3).to_i.times { create(:budget_investment, heading: heading) }
 
+      r1 = 1
+      r2 = 2
+
       in_browser(:one) do
-        visit budget_investments_path(budget, heading: heading)
+        visit budget_investments_path(budget, heading: heading, random_seed: r1)
         @first_user_investments_order = investments_order
       end
 
       in_browser(:two) do
-        visit budget_investments_path(budget, heading: heading)
+        visit budget_investments_path(budget, heading: heading, random_seed: r2)
         @second_user_investments_order = investments_order
       end
 
@@ -594,6 +597,23 @@ feature 'Budget Investments' do
 
         expect(investments_order).to eq(@second_user_investments_order)
       end
+    end
+
+    scenario 'Each user has a equal and consistent budget investment order when the random_seed is equal', :js do
+      (Kaminari.config.default_per_page * 1.3).to_i.times { create(:budget_investment, heading: heading) }
+
+      in_browser(:one) do
+        visit budget_investments_path(budget, heading: heading, random_seed: '1')
+        @first_user_investments_order = investments_order
+      end
+
+      in_browser(:two) do
+        visit budget_investments_path(budget, heading: heading, random_seed: '1')
+        @second_user_investments_order = investments_order
+      end
+
+      expect(@first_user_investments_order).to eq(@second_user_investments_order)
+
     end
 
     def investments_order
@@ -911,7 +931,7 @@ feature 'Budget Investments' do
     user = create(:user)
     investment = create(:budget_investment)
     create(:budget_investment_milestone, investment: investment,
-                                         description: "Last milestone",
+                                         description: "Last milestone with a link to https://consul.dev",
                                          publication_date: Date.tomorrow)
     first_milestone = create(:budget_investment_milestone, investment: investment,
                                                            description: "First milestone",
@@ -925,12 +945,13 @@ feature 'Budget Investments' do
     find("#tab-milestones-label").trigger('click')
 
     within("#tab-milestones") do
-      expect(first_milestone.description).to appear_before('Last milestone')
+      expect(first_milestone.description).to appear_before('Last milestone with a link to https://consul.dev')
       expect(page).to have_content(Date.tomorrow)
       expect(page).to have_content(Date.yesterday)
       expect(page).not_to have_content(Date.current)
       expect(page.find("#image_#{first_milestone.id}")['alt']).to have_content(image.title)
       expect(page).to have_link(document.title)
+      expect(page).to have_link("https://consul.dev")
     end
   end
 
