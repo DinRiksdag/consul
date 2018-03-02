@@ -146,7 +146,7 @@ en:
         description: "Description"
         terms_of_service: "Terms of service"
       user:
-        login: "Email or username"
+        login: "Email or username or personal number"
         email: "Email"
         username: "Username"
         password_confirmation: "Password confirmation"
