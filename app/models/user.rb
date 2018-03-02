@@ -34,10 +34,12 @@ class User < ActiveRecord::Base
   has_many :follows
   belongs_to :geozone
 
+  validates :personnummer, presence: true, if: :personnummer_required?
   validates :username, presence: true, if: :username_required?
   validates :username, uniqueness: { scope: :registering_with_oauth }, if: :username_required?
   validates :document_number, uniqueness: { scope: :document_type }, allow_nil: true
 
+  validate :validate_personnummer_length
   validate :validate_username_length
 
   validates :official_level, inclusion: {in: 0..5}
@@ -238,6 +240,14 @@ class User < ActiveRecord::Base
     term.present? ? where("email = ? OR username ILIKE ?", term, "%#{term}%") : none
   end
 
+  def self.personnummer_min_length
+    @@personnummer_min_length = 10
+  end
+
+  def self.personnummer_max_length
+    @@personnummer_max_length = 12
+  end
+
   def self.username_max_length
     @@username_max_length ||= columns.find { |c| c.name == 'username' }.limit || 60
   end
@@ -253,6 +263,10 @@ class User < ActiveRecord::Base
   def password_required?
     return false if skip_password_validation
     super
+  end
+
+  def personnummer_required?
+    !organization? && !erased?
   end
 
   def username_required?
@@ -333,6 +347,14 @@ class User < ActiveRecord::Base
     def clean_document_number
       return unless document_number.present?
       self.document_number = document_number.gsub(/[^a-z0-9]+/i, "").upcase
+    end
+
+    def validate_personnummer_length
+      validator = ActiveModel::Validations::LengthValidator.new(
+        attributes: :personnummer,
+        minimum: User.personnummer_min_length,
+        maximum: User.personnummer_max_length)
+      validator.validate(self)
     end
 
     def validate_username_length
