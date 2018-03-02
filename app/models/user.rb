@@ -198,6 +198,7 @@ class User < ActiveRecord::Base
       erase_reason: erase_reason,
       username: nil,
       email: nil,
+      personnummer: nil,
       unconfirmed_email: nil,
       phone_number: nil,
       encrypted_password: "",
