@@ -26,7 +26,7 @@ class AccountController < ApplicationController
                      [:phone_number, :email_on_comment, :email_on_comment_reply, :newsletter,
                       organization_attributes: [:name, :responsible_name]]
                    else
-                     [:username, :public_activity, :public_interests, :email_on_comment,
+                     [:username, :personnummer, :public_activity, :public_interests, :email_on_comment,
                       :email_on_comment_reply, :email_on_direct_message, :email_digest, :newsletter,
                       :official_position_badge]
                    end

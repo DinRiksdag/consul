@@ -28,6 +28,7 @@
 
             <% else %>
               <%= f.text_field :username, maxlength: User.username_max_length, placeholder: t("account.show.username_label") %>
+              <%= f.text_field :personnummer, maxlength: User.personnummer_max_length, placeholder: t("account.show.personnummer_label") %>
             <% end %>
           </div>
 

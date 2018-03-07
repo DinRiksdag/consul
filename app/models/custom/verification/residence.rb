@@ -11,6 +11,7 @@ class Verification::Residence
   end
 
   def residence_in_madrid
+    return true
     return if errors.any?
 
     unless residency_valid?
@@ -23,7 +24,7 @@ class Verification::Residence
   private
 
     def valid_postal_code?
-      postal_code =~ /^280/
+      postal_code =~ /^(s-|S-){0,1}[0-9]{3}\s?[0-9]{2}$/
     end
 
 end

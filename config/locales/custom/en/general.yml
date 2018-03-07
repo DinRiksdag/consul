@@ -1,4 +1,7 @@
 en:
+  account:
+    show:
+      personnummer_label: Personnummer
   debates:
     index:
       section_footer:
