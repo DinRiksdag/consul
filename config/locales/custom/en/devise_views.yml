@@ -1,0 +1,9 @@
+en:
+  devise_views:
+    sessions:
+      new:
+        login_label: Email or username or personal number
+    users:
+      registrations:
+        new:
+          personnummer_label: Personal Number
