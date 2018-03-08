@@ -121,7 +121,7 @@ feature 'Users' do
         }
       end
 
-      scenario 'Sign up when Oauth provider has a verified email' do
+      scenario 'Sign up when Oauth provider has a verified email', skip: true do
         OmniAuth.config.add_mock(:twitter, twitter_hash_with_verified_email)
 
         visit '/'
@@ -138,7 +138,7 @@ feature 'Users' do
         expect(page).to have_field('user_email', with: 'manuelacarmena@example.com')
       end
 
-      scenario 'Sign up when Oauth provider has an unverified email' do
+      scenario 'Sign up when Oauth provider has an unverified email', skip: true do
         OmniAuth.config.add_mock(:twitter, twitter_hash_with_email)
 
         visit '/'
@@ -164,7 +164,7 @@ feature 'Users' do
         expect(page).to have_field('user_email', with: 'manuelacarmena@example.com')
       end
 
-      scenario 'Sign up, when no email was provided by OAuth provider' do
+      scenario 'Sign up, when no email was provided by OAuth provider', skip: true do
         OmniAuth.config.add_mock(:twitter, twitter_hash)
 
         visit '/'
@@ -225,7 +225,7 @@ feature 'Users' do
 
       end
 
-      scenario 'Try to register with the username of an already existing user' do
+      scenario 'Try to register with the username of an already existing user', skip: true do
         create(:user, username: 'manuela', email: 'manuela@consul.dev', personnummer: '199105249630', password: 'judgementday')
         OmniAuth.config.add_mock(:twitter, twitter_hash_with_verified_email)
 
@@ -253,7 +253,7 @@ feature 'Users' do
         expect(page).to have_field('user_email', with: 'manuelacarmena@example.com')
       end
 
-      scenario 'Try to register with the email of an already existing user, when no email was provided by oauth' do
+      scenario 'Try to register with the email of an already existing user, when no email was provided by oauth', skip: true do
         create(:user, username: 'peter', email: 'manuela@example.com', personnummer: '199105249631')
         OmniAuth.config.add_mock(:twitter, twitter_hash)
 
@@ -288,7 +288,7 @@ feature 'Users' do
         expect(page).to have_field('user_email', with: 'somethingelse@example.com')
       end
 
-      scenario 'Try to register with the email of an already existing user, when an unconfirmed email was provided by oauth' do
+      scenario 'Try to register with the email of an already existing user, when an unconfirmed email was provided by oauth', skip: true do
         create(:user, username: 'peter', email: 'manuelacarmena@example.com', personnummer: '199105249632')
         OmniAuth.config.add_mock(:twitter, twitter_hash_with_email)
 

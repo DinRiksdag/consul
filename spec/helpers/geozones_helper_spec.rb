@@ -12,7 +12,7 @@ describe GeozonesHelper do
 
     it "returns default string for no geozone if geozone is blank" do
       spending_proposal = create(:spending_proposal, geozone: nil)
-      expect(geozone_name(spending_proposal)).to eq "All the country"
+      expect(geozone_name(spending_proposal)).to eq "All city"
     end
   end
 
@@ -42,7 +42,7 @@ describe GeozonesHelper do
     end
 
     it "returns default string for no geozone if geozone is blank" do
-      expect(geozone_name_from_id(nil)).to eq "All the country"
+      expect(geozone_name_from_id(nil)).to eq "All city"
     end
   end
 

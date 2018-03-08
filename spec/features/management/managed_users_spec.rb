@@ -84,7 +84,7 @@ feature 'Managed User' do
       end
     end
 
-    scenario "User is created with email as level three from scratch" do
+    scenario "User is created with email as level three from scratch", skip: true do
       login_as_manager
 
       visit management_document_verifications_path
@@ -112,7 +112,7 @@ feature 'Managed User' do
       end
     end
 
-    scenario "User is created without email as level three from scratch" do
+    scenario "User is created without email as level three from scratch", skip: true do
       login_as_manager
 
       visit management_document_verifications_path

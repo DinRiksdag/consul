@@ -9,4 +9,8 @@ gem 'rack-timeout'
 gem 'rails_12factor', :group => :production
 gem 'heroku-deflater', :group => :production
 
+group :test do
+  gem 'fuubar'
+end
+
 ruby '2.3.2'
