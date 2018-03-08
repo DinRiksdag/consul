@@ -1,7 +1,5 @@
 section "Creating Users" do
-  def create_user(email,
-                  username = Faker::Name.name
-                 )
+  def create_user(email, username = Faker::Name.name)
     password = '12345678'
     User.create!(
       username:               username,

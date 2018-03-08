@@ -22,11 +22,11 @@ describe 'Customization Engine' do
     expect(test_key).to eq 'Overriden string with custom locales'
   end
 
-#  it "does not override original locales" do
-#    increase_load_path_and_reload(Dir[Rails.root.join('spec', 'support',
-#                                                      'locales', '**', '*.{rb,yml}')])
-#    expect(test_key).to eq 'Not overriden string with custom locales'
-#  end
+  xit "does not override original locales" do
+    increase_load_path_and_reload(Dir[Rails.root.join('spec', 'support',
+                                                      'locales', '**', '*.{rb,yml}')])
+    expect(test_key).to eq 'Not overriden string with custom locales'
+  end
 
   def reset_load_path_and_reload(path)
     I18n.load_path = path
