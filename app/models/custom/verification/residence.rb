@@ -11,7 +11,6 @@ class Verification::Residence
   end
 
   def residence_in_madrid
-    return true
     return if errors.any?
 
     unless residency_valid?

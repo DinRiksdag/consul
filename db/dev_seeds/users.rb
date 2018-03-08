@@ -1,14 +1,13 @@
 section "Creating Users" do
   def create_user(email,
-                  username = Faker::Name.name,
-                  personnummer = unique_personnummer
+                  username = Faker::Name.name
                  )
     password = '12345678'
     User.create!(
       username:               username,
       email:                  email,
       date_of_birth:          date_of_birth,
-      personnummer:           personnummer,
+      personnummer:           unique_personnummer,
       password:               password,
       password_confirmation:  password,
       confirmed_at:           Time.current,
@@ -25,11 +24,11 @@ section "Creating Users" do
   end
 
   def date_of_birth
+    @date = rand((Time.current - 80.years)..(Time.current - 16.years))
     @date
   end
 
   def unique_personnummer
-    @date = rand((Time.current - 80.years)..(Time.current - 16.years))
     @number = Faker::Number.between(1000, 9999)
     "#{@date.strftime("%Y%m%d")}#{@number}"
   end

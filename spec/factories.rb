@@ -9,10 +9,10 @@ FactoryBot.define do
   sequence(:document_number) { |n| "#{n.to_s.rjust(8, '0')}X" }
 
   factory :user do
-    sequence(:username)        { |n| "Manuela#{n}" }
-    sequence(:email)           { |n| "manuela#{n}@consul.dev" }
+    sequence(:username)              { |n| "Manuela#{n}" }
+    sequence(:email)                 { |n| "manuela#{n}@consul.dev" }
+    sequence(:personnummer, 1000)    { |n| "19801231#{n}" }
 
-    personnummer               '198012319784'
     password                   'judgmentday'
     terms_of_service           '1'
     confirmed_at               { Time.current }
