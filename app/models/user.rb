@@ -352,11 +352,13 @@ class User < ActiveRecord::Base
     end
 
     def validate_personnummer_length
-      validator = ActiveModel::Validations::LengthValidator.new(
-        attributes: :personnummer,
-        minimum: User.personnummer_min_length,
-        maximum: User.personnummer_max_length)
-      validator.validate(self)
+      if personnummer_required?
+        validator = ActiveModel::Validations::LengthValidator.new(
+          attributes: :personnummer,
+          minimum: User.personnummer_min_length,
+          maximum: User.personnummer_max_length)
+        validator.validate(self)
+      end
     end
 
     def validate_username_length
