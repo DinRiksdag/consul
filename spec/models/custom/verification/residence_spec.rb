@@ -12,7 +12,7 @@ describe Verification::Residence do
         residence.valid?
         expect(residence.errors[:postal_code].size).to eq(0)
 
-        residence.postal_code = "S-11150"
+        residence.postal_code = "11150"
         residence.valid?
         expect(residence.errors[:postal_code].size).to eq(0)
       end
@@ -20,11 +20,11 @@ describe Verification::Residence do
       it "is not valid with incorrect Swedish postal codes" do
         residence.postal_code = "123456"
         residence.valid?
-        expect(residence.errors[:postal_code].size).to eq(1)
+        expect(residence.errors[:postal_code].size).to eq(2)
 
         residence.postal_code = "11"
         residence.valid?
-        expect(residence.errors[:postal_code].size).to eq(1)
+        expect(residence.errors[:postal_code].size).to eq(2)
         expect(residence.errors[:postal_code]).to include("In order to be verified, you must be registered.")
       end
     end
